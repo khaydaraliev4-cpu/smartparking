@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  background-image: radial-gradient(circle at 20% 20%, rgba(0, 170, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 80% 0%, rgba(167, 73, 255, 0.25), transparent 26%);
+  min-height: 100vh;
+}
+
+.glass {
+  @apply backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-2xl;
+  background: linear-gradient(140deg, rgba(255,255,255,0.58), rgba(255,255,255,0.23));
+}
+
+.dark .glass {
+  background: linear-gradient(140deg, rgba(23,29,43,0.68), rgba(23,29,43,0.22));
+}
+
+.brand-sweep {
+  background: linear-gradient(120deg, #22d3ee 0%, #60a5fa 40%, #a78bfa 60%, #22d3ee 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
